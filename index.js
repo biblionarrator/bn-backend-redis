@@ -16,6 +16,9 @@ function RedisBackend(config) {
                 self.connected = true;
                 connect.resolve(client)
             });
+            client.on('error', function (err) {
+                connect.reject(err);
+            });
         }
         return connect.promise;
     }

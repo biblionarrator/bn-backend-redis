@@ -212,3 +212,9 @@ function RedisBackend(config) {
 }
 
 module.exports = RedisBackend;
+module.exports.description = 'Redis backend (persistent, fast in-memory store)';
+module.exports.features = {
+    datastore: true,
+    mediastore: false,
+    cache: true
+};
